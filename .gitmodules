@@ -1,0 +1,6 @@
+[submodule "data-engine/referring-masklet-generator/Grounded-SAM-2"]
+	path = data-engine/referring-masklet-generator/Grounded-SAM-2
+	url = https://github.com/IDEA-Research/Grounded-SAM-2.git
+[submodule "data-engine/referring-masklet-generator/RexSeek"]
+	path = data-engine/referring-masklet-generator/RexSeek
+	url = https://github.com/IDEA-Research/RexSeek.git
