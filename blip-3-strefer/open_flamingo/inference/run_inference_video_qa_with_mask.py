@@ -592,7 +592,7 @@ def run_inference(args):
     image_proc = partial(process_images, image_processor=image_processor, model_cfg=cfg)
 
 
-    with open('data/inference_sample.json', 'r') as f:
+    with open('../assets/inference_sample.json', 'r') as f:
         sample_set = json.load(f)
     sample_set['path'] = os.path.join(args.data_root, sample_set['path'])
 
