@@ -28,14 +28,50 @@ By design, **Strefer** generates instruction-response pairs—requiring no legac
 
 **Strefer** enhances the ability of Video LLMs to interpret spatial and temporal references, fostering more versatile, space-time-aware reasoning essential for real-world AI companions.
 
+## Download Strefer-Synthesized Instruction Data 💾
+We release the **final recipe descirbed in our [paper](https://arxiv.org/abs/2509.03501)** including the Strefer synthesized instruction-response pairs on Hugging Face: https://huggingface.co/datasets/strefer/strefer
 
- 
+The following image illustrates the data composition of the final recipe used in our experiments:
+
+<br>
+<div align="center">
+  <img src="https://raw.githubusercontent.com/SalesforceAIResearch/strefer/main/assets/data_final recipe_pie_chart.png" width="800">
+</div>
+<br>
+
+If you hope to replicate model training, please follow the following steps to download and prepare the data:
+```bash
+git clone --recurse-submodules https://github.com/SalesforceAIResearch/strefer.git
+cd blip-3-strefer
+mkdir data
+cd data
+git clone https://huggingface.co/datasets/strefer/strefer
+apt-get install git-lfs
+git lfs install
+git lfs pull
+```
+## Code for Model Training and Inference 🧠
+Our model incorporates a spatiotemporal object encoder from [Video-
+Refer](https://arxiv.org/abs/2501.00599) for **region comprehension** and temporal tokens from [Grounded-VideoLLM](https://arxiv.org/abs/2410.03290) for **precise timestamp comprehension**. These modules are integrated into the [BLIP-3-Video](https://www.salesforceairesearch.com/opensource/xGen-MM-Vid/index.html) architecture. We call this model trained using our Strefer-synthesized instruction data as **BLIP-3-Strefer**.
+
+We release our code used to train BLIP-3-Strefer and perform inference. For detailed guidelines, please refer to [this README](blip-3-strefer/README.md).
+
+<div align=center>
+  <img src="https://raw.githubusercontent.com/SalesforceAIResearch/strefer/main/assets/strefer_model.png" width="800">
+</div>
+
+
 ## Code for Referring Masklet Generation 💻
 
 Our novel **Referring Masklet Generation Pipeline** is a key module within **Strefer**. This pipeline produces tracked segmentation masks from videos with complex structures based on multi-word natural language referring expressions. 
 
 
 Our referring masklet generator is carefully crafted to address key limitations overlooked by prior works by orchestrating complementary strengths of the state-of-the-art pixel-level vision foundation models to achieve more effective results. The code has been released; for detailed installation and usage guidelines, please refer to [this README](data-engine/referring-masklet-generator).
+
+<div align=center>
+  <img src="../../assets/teaser-referring_masklet_generator.png" width=800 >
+</div>
+
 
 ## License 💼
 Our code, data, and models are released for research-only, non-commercial purposes under a CC-BY-NC 4.0 license. Users are responsible for making their own assessment of any obligations or responsibilities under the corresponding licenses or the terms and conditions applicable to the original code, data, and model weights.
