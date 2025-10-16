@@ -134,3 +134,13 @@ We thank the authors of the following repositories/sources for releasing their d
 - https://github.com/IDEA-Research/GroundingDINO
 - https://github.com/IDEA-Research/RexSeek
 
+## Citation 📝
+Please cite us if you find our work helpful. Thank you! 🥰🙏💖
+```bibtex
+@article{zhou2025strefer,
+  title={Strefer: Empowering Video LLMs with Space-Time Referring and Reasoning via Synthetic Instruction Data},
+  author={Zhou, Honglu and Peng, Xiangyu and Kendre, Shrikant and Ryoo, Michael S. and Savarese, Silvio and Xong, Caiming and Niebles, Juan Carlos},
+  journal={arXiv preprint arXiv:2509.03501},
+  year={2025}
+}
+```
