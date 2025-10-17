@@ -7,6 +7,7 @@
 [![Dataset](https://img.shields.io/badge/Dataset-Hugging_Face-E59FB6)](https://huggingface.co/datasets/strefer/strefer) 
 [![Model](https://img.shields.io/badge/Model-download-E6A151)]() 
 [![video](https://img.shields.io/badge/Watch_Video-36600E?logo=youtube&logoColor=green)](https://youtu.be/87L2tyzxlvs)
+[![Poster](https://img.shields.io/badge/Poster-view-00eb0c)](https://drive.google.com/file/d/1BpLAyzZdbv77NE_hXBf29OxTmbVQ3ONU/view?usp=sharing)
 </div>
 
 **[Salesforce AI Research](https://www.salesforceairesearch.com/)**
