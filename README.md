@@ -3,7 +3,7 @@
 <div align=center>
 
 [![Homepage](https://img.shields.io/badge/Homepage-visit-9DC3E6)](https://strefer.github.io/) 
-[![arXiv preprint](https://img.shields.io/badge/arxiv-2501.00599-ECA8A7?logo=arxiv)](https://arxiv.org/abs/2509.03501) 
+[![arXiv preprint](https://img.shields.io/badge/arxiv-2509.03501-ECA8A7?logo=arxiv)](https://arxiv.org/abs/2509.03501) 
 [![Dataset](https://img.shields.io/badge/Dataset-Hugging_Face-E59FB6)](https://huggingface.co/datasets/strefer/strefer) 
 [![Model](https://img.shields.io/badge/Model-download-E6A151)]() 
 [![video](https://img.shields.io/badge/Watch_Video-36600E?logo=youtube&logoColor=green)](https://youtu.be/87L2tyzxlvs)
