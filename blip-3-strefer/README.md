@@ -6,9 +6,18 @@
 
 
 
+## Table of Contents
+- [Model 💡](#model-)
+- [Installation ⚙️](#installation-%EF%B8%8F)
+- [Download Strefer-Synthesized Instruction Data 💾](#download-strefer-synthesized-instruction-data-)
+- [Training 🧠](#training-)
+- [Inference 🤖](#inference-)
+- [Citation 📝](#citation-)
+
+<br>
 
 
-## Highlights 🌟
+## Model 💡
 
 Our model incorporates a spatiotemporal object encoder from [Video-Refer](https://arxiv.org/abs/2501.00599) for **region comprehension** and temporal tokens from [Grounded-VideoLLM](https://arxiv.org/abs/2410.03290) for **precise timestamp comprehension**. These modules are integrated into the [BLIP-3-Video](https://arxiv.org/abs/2410.16267) architecture. We call this model trained using our Strefer-synthesized instruction data as **BLIP-3-Strefer**.
 
