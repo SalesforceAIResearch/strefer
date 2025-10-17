@@ -6,7 +6,7 @@
 [![arXiv preprint](https://img.shields.io/badge/arxiv-2509.03501-ECA8A7?logo=arxiv)](https://arxiv.org/abs/2509.03501) 
 [![Poster](https://img.shields.io/badge/Poster-view-00eb0c)](https://drive.google.com/file/d/1BpLAyzZdbv77NE_hXBf29OxTmbVQ3ONU/view?usp=sharing)
 [![Dataset](https://img.shields.io/badge/Dataset-Hugging_Face-E59FB6)](https://huggingface.co/datasets/strefer/strefer) 
-[![Model](https://img.shields.io/badge/Model-download-E6A151)]() 
+[![Model](https://img.shields.io/badge/Model-download-E6A151)](https://drive.google.com/file/d/1PJNCMw_zsb9wtKjLabxrQjrxY6LpaCoI/view?usp=sharing) 
 [![video](https://img.shields.io/badge/Watch_Video-36600E?logo=youtube&logoColor=green)](https://youtu.be/87L2tyzxlvs)
 </div>
 
@@ -46,7 +46,7 @@ By design, **Strefer** generates instruction-response pairs—requiring no legac
 
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/SalesforceAIResearch/strefer/main/assets/new_capability.gif" width="800">
+  <img src="https://raw.githubusercontent.com/SalesforceAIResearch/strefer/main/assets/instruction_data_sample.gif" width="800">
 </div>
 
 <br>
@@ -76,7 +76,7 @@ git lfs pull
 
 <br>
 
-## Download Evaluation Data for Timestamp-based Yes/No QA on QVHighlights ✅
+## Download Data for Timestamp-based Yes/No QA on QVHighlights ✅
 **Timestamp-based Yes/No QA on QVHighlights** is a task that repurposes existing annotations from the video highlight detection dataset, [QVHighlights](https://arxiv.org/abs/2107.09609).
 We transform annotations from QVHighlights into questions tied to specific timestamps, each expecting a ‘Yes’ or ‘No’ answer.
 The task measures how well a model understands events in videos based on specific timestamp references.
@@ -87,9 +87,17 @@ We release this data on Hugging Face: [https://huggingface.co/datasets/strefer/q
 
 <br>
 
+## Download Model (BLIP-3-Strefer) for Space-Time Referring 🤖
+We release the final checkpoint of our model, **BLIP-3-Strefer**, for space-time referring. For details on how to use this model, please refer to [this README](blip-3-strefer/README.md).
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/SalesforceAIResearch/strefer/main/assets/new_capability.gif" width="800">
+</div>
+
+<br>
+
 ## Code for Model Training and Inference 🧠
-Our model incorporates a spatiotemporal object encoder from [Video-
-Refer](https://arxiv.org/abs/2501.00599) for **region comprehension** and temporal tokens from [Grounded-VideoLLM](https://arxiv.org/abs/2410.03290) for **precise timestamp comprehension**. These modules are integrated into the [BLIP-3-Video](https://www.salesforceairesearch.com/opensource/xGen-MM-Vid/index.html) architecture. We call this model trained using our Strefer-synthesized instruction data as **BLIP-3-Strefer**.
+Our model incorporates a spatiotemporal object encoder from [Video-Refer](https://arxiv.org/abs/2501.00599) for **region comprehension** and temporal tokens from [Grounded-VideoLLM](https://arxiv.org/abs/2410.03290) for **precise timestamp comprehension**. These modules are integrated into the [BLIP-3-Video](https://arxiv.org/abs/2410.16267) architecture. We call this model trained using our Strefer-synthesized instruction data as **BLIP-3-Strefer**.
 
 We release our code used to train BLIP-3-Strefer and perform inference. For detailed guidelines, please refer to [this README](blip-3-strefer/README.md).
 
