@@ -50,7 +50,7 @@ git lfs pull
 ```
 ## Training 🧠
 ### Step 1: 
-**Our model is initialized from BLIP-3 pretrained checkpoint. Download this pretrained checkpoint [here]().**
+**Our model is initialized from BLIP-3 pretrained checkpoint. Download this pretrained checkpoint [here](https://drive.google.com/file/d/1PJNCMw_zsb9wtKjLabxrQjrxY6LpaCoI/view?usp=sharing).**
 
 ### Step 2: 
 Update the paths and credentials (e.g., wandb api key) in `strefer/blip-3-strefer/open_flamingo/scripts/train.sh`.
@@ -63,7 +63,7 @@ bash blip-3-strefer/open_flamingo/scripts/train.sh
 
 ## Inference 🤖
 ### Step 1: 
-Use eithr the checkpoint you obtained after replicating our model training, or **download the BLIP-3-Strefer checkpoint [here]().**
+Use eithr the checkpoint you obtained after replicating our model training, or **download the BLIP-3-Strefer checkpoint [here](https://drive.google.com/file/d/1hUa_A_qp7stsDhrRuD7_4NotAs6PW2gz/view?usp=sharing).**
 
 ### Step 2: 
 Update the paths in `strefer/blip-3-strefer/open_flamingo/scripts/test.sh`.
