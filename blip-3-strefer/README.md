@@ -10,8 +10,7 @@
 
 ## Highlights 🌟
 
-Our model incorporates a spatiotemporal object encoder from [Video-
-Refer](https://arxiv.org/abs/2501.00599) for **region comprehension** and temporal tokens from [Grounded-VideoLLM](https://arxiv.org/abs/2410.03290) for **precise timestamp comprehension**. These modules are integrated into the [BLIP-3-Video](https://arxiv.org/abs/2410.16267) architecture. We call this model trained using our Strefer-synthesized instruction data as **BLIP-3-Strefer**.
+Our model incorporates a spatiotemporal object encoder from [Video-Refer](https://arxiv.org/abs/2501.00599) for **region comprehension** and temporal tokens from [Grounded-VideoLLM](https://arxiv.org/abs/2410.03290) for **precise timestamp comprehension**. These modules are integrated into the [BLIP-3-Video](https://arxiv.org/abs/2410.16267) architecture. We call this model trained using our Strefer-synthesized instruction data as **BLIP-3-Strefer**.
 
 Here, we release our code used to train BLIP-3-Strefer and perform inference.
 
@@ -63,7 +62,7 @@ bash blip-3-strefer/open_flamingo/scripts/train.sh
 
 ## Inference 🤖
 ### Step 1: 
-Use eithr the checkpoint you obtained after replicating our model training, or **download the BLIP-3-Strefer checkpoint [here](https://drive.google.com/file/d/1hUa_A_qp7stsDhrRuD7_4NotAs6PW2gz/view?usp=sharing).**
+Use either the checkpoint you obtained after replicating our model training, or **download the BLIP-3-Strefer checkpoint [here](https://drive.google.com/file/d/1hUa_A_qp7stsDhrRuD7_4NotAs6PW2gz/view?usp=sharing).**
 
 ### Step 2: 
 Update the paths in `strefer/blip-3-strefer/open_flamingo/scripts/test.sh`.
