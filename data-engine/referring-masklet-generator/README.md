@@ -10,7 +10,13 @@
 </div>
 
 
-
+## Table of Contents
+- [Highlights 🌟](#highlights-)
+- [Installation ⚙️](#installation-%EF%B8%8F)
+- [Demo 🎥](#demo-)
+- [Acknowledgements](acknowledgements)
+- [Citation 📝](#citation-)
+  
 
 ## Highlights 🌟
 
@@ -18,9 +24,6 @@ This is code for our novel **Referring Masklet Generation Pipeline** within **St
 
 Our pipeline robustly handles challenging scenarios, including multiple same- or similar-category entities described differently, entities absent in the first frame, and entities that temporarily exit and re-enter the scene. It is carefully crafted to address key limitations overlooked by prior works by orchestrating complementary strengths of the state-of-the-art pixel-level vision foundation models, including [Grounding DINO](https://arxiv.org/abs/2303.05499), [SAM 2](https://arxiv.org/abs/2408.00714) and [RexSeek](https://arxiv.org/abs/2503.08507).
 
-## Contents 📖
-- [Installation](#installation-%EF%B8%8F)
-- [Demo](#demo-)
 
 ## Installation ⚙️
 ### Step 1: 
