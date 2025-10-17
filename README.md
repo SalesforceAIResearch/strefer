@@ -21,6 +21,17 @@
 <br>
 
 
+## Table of Contents
+- [Highlights 🌟](#highlights-)
+- [Download Strefer-Synthesized Instruction Data 💾](#download-strefer-synthesized-instruction-data-)
+- [Download Data for Timestamp-based Yes/No QA on QVHighlights ✅](#download-data-for-timestamp-based-yesno-qa-on-qvhighlights-)
+- [Download Model (BLIP-3-Strefer) for Space-Time Referring 🤖](#download-model-blip-3-strefer-for-space-time-referring-)
+- [Code for Model Training and Inference 🧠](#code-for-model-training-and-inference-)
+- [Code for Referring Masklet Generation 💻](#code-for-referring-masklet-generation-)
+- [License 💼](#license-)
+- [Citation 📝](#citation-)
+
+<br>
 
 ## Highlights 🌟
 
