@@ -6,7 +6,7 @@
 [![arXiv preprint](https://img.shields.io/badge/arxiv-2509.03501-ECA8A7?logo=arxiv)](https://arxiv.org/abs/2509.03501) 
 [![Poster](https://img.shields.io/badge/Poster-view-00eb0c)](https://drive.google.com/file/d/1BpLAyzZdbv77NE_hXBf29OxTmbVQ3ONU/view?usp=sharing)
 [![Dataset](https://img.shields.io/badge/Dataset-Hugging_Face-E59FB6)](https://huggingface.co/datasets/strefer/strefer) 
-[![Model](https://img.shields.io/badge/Model-download-E6A151)](https://drive.google.com/file/d/1PJNCMw_zsb9wtKjLabxrQjrxY6LpaCoI/view?usp=sharing) 
+[![Model](https://img.shields.io/badge/Model-download-E6A151)](https://drive.google.com/file/d/1hUa_A_qp7stsDhrRuD7_4NotAs6PW2gz/view?usp=sharing) 
 [![video](https://img.shields.io/badge/Watch_Video-36600E?logo=youtube&logoColor=green)](https://youtu.be/87L2tyzxlvs)
 </div>
 
@@ -88,7 +88,7 @@ We release this data on Hugging Face: [https://huggingface.co/datasets/strefer/q
 <br>
 
 ## Download Model (BLIP-3-Strefer) for Space-Time Referring 🤖
-We release the final checkpoint of our model, **BLIP-3-Strefer**, for space-time referring. For details on how to use this model, please refer to [this README](blip-3-strefer/README.md).
+We release the [final checkpoint of our model, **BLIP-3-Strefer**](https://drive.google.com/file/d/1hUa_A_qp7stsDhrRuD7_4NotAs6PW2gz/view?usp=sharing), for space-time referring. For details on how to use this model, please refer to [this README](blip-3-strefer/README.md).
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/SalesforceAIResearch/strefer/main/assets/new_capability.gif" width="800">
