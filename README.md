@@ -52,7 +52,7 @@ By design, **Strefer** generates instruction-response pairs—requiring no legac
 <br>
 
 ## Download Strefer-Synthesized Instruction Data 💾
-We release the **final recipe descirbed in our [paper](https://arxiv.org/abs/2509.03501)** including the Strefer synthesized instruction-response pairs on Hugging Face: https://huggingface.co/datasets/strefer/strefer
+We release the **final recipe descirbed in our [paper](https://arxiv.org/abs/2509.03501)** including the Strefer synthesized instruction-response pairs on Hugging Face: [https://huggingface.co/datasets/strefer/strefer](https://huggingface.co/datasets/strefer/strefer)
 
 The following image illustrates the data composition of the final recipe used in our experiments:
 
@@ -73,6 +73,17 @@ apt-get install git-lfs
 git lfs install
 git lfs pull
 ```
+
+<br>
+
+## Download Evaluation Data for Timestamp-based Yes/No QA on QVHighlights ✅
+**Timestamp-based Yes/No QA on QVHighlights** is a task that repurposes existing annotations from the video highlight detection dataset, [QVHighlights](https://arxiv.org/abs/2107.09609).
+We transform annotations from QVHighlights into questions tied to specific timestamps, each expecting a ‘Yes’ or ‘No’ answer.
+The task measures how well a model understands events in videos based on specific timestamp references.
+
+For details on how we construct the question-answer pairs, please check page 9 in our [paper](https://arxiv.org/abs/2509.03501).
+
+We release this data on Hugging Face: [https://huggingface.co/datasets/strefer/qvhighlights-yesno-qa](https://huggingface.co/datasets/strefer/qvhighlights-yesno-qa)
 
 <br>
 
