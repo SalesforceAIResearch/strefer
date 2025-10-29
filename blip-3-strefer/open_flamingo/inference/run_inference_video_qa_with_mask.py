@@ -16,8 +16,6 @@ import numpy as np
 import cv2
 import time
 import importlib
-from torchcodec.decoders import VideoDecoder
-from torchcodec.samplers import clips_at_random_timestamps
 
 import open_flamingo
 import open_flamingo.src.kosmos
@@ -195,6 +193,8 @@ def load_video(video_path, num_frames, start_time="00:00:00.000", end_time=None)
     if backend_video == 'opencv':
         return load_video_opencv(video_path, num_frames, start_time, end_time)
     elif backend_video == 'torchcodec':
+        from torchcodec.decoders import VideoDecoder
+        from torchcodec.samplers import clips_at_random_timestamps
         return load_video_torchcodec(video_path, num_frames, start_time, end_time)
     else:
         print(f"Error: Video loading using {backend_video} is not supported.")
@@ -562,6 +562,23 @@ def run_inference(args):
         import shutil
         shutil.rmtree(args.output_dir)
     os.makedirs(args.output_dir, exist_ok=True)
+
+    with open('../assets/inference_sample.json', 'r') as f:
+        sample_sets = json.load(f)
+    sample_set = sample_sets[0]  # mask refer + timestamp refer
+    # sample_set = sample_sets[1]  # masklet refer (person 1: man in the red shirt) 
+    # sample_set = sample_sets[2]  # masklet refer (person 2: man in the black shirt)
+    # sample_set = sample_sets[3]  # multi-masklet refer (person 1 + person 2)
+        
+    sample_set['path'] = os.path.join(args.data_root, sample_set['path'])
+    assert os.path.exists(sample_set['path'])
+
+    # turn <video> into <image> (blip-3-video was trained in that way)
+    sample_set['conversations'][0]['value'] = sample_set['conversations'][0]['value'].replace(
+        '<video>', '<image>')
+    sample_set['conversations'][1]['value'] = sample_set['conversations'][1]['value'].replace(
+        '<video>', '<image>')
+
     
     # Initialize the model
     # Set model conf
@@ -592,10 +609,7 @@ def run_inference(args):
     image_proc = partial(process_images, image_processor=image_processor, model_cfg=cfg)
 
 
-    with open('../assets/inference_sample.json', 'r') as f:
-        sample_set = json.load(f)
-    sample_set['path'] = os.path.join(args.data_root, sample_set['path'])
-
+    
     # Model inference
     if 'annotation' in sample_set:
         output = get_model_output_with_mask_input(model = model,
@@ -625,7 +639,47 @@ def run_inference(args):
     print("Prediction: ", prediction['pred'])
     print("GT_answer: ", prediction['GT_answer'])
     print('%'*50)
+
+    """
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    Video path:  ../assets/5379320378.mp4
+    Question:  <video>
+    Please answer the following question about the <region>.
+    What was the person doing between <start_time> and <end_time> in the video?
+    Prediction:  Remained stationary, observing the spinning individual in the colorful outfit. 
+    GT_answer:  Standing still and watching the person in the colorful skirt perform a spinning dance.
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    Video path:  ../assets/9586602092.mp4
+    Question:  <video>
+    Please answer the following question about the <region>.
+    What was he doing at the beginning of the video?
+    Prediction:  Engaged in a conversation with the man in the black shirt, using hand gestures while speaking. 
+    GT_answer:  Engaged in a conversation with the man in the black shirt, gesturing with his hands while talking.
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    Video path:  ../assets/9586602092.mp4
+    Question:  <video>
+    Please answer the following question about the <region>.
+    What did he do at the end of the video?
+    Prediction:  Engaged in a conversation, gesturing with his hands while speaking. 
+    GT_answer:  He gestured with his hands while speaking, seated at a table with a bottle of water and a plate of food.
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    Video path:  ../assets/9586602092.mp4
+    Question:  <video>
+    How does <person1><region>'s position relate to <person2><region>'s position? Pick the best option:
+    (A) <person1> is in front of <person2>
+    (B) <person1> is to the right of <person2>.
+    (C) <person1> is to the left of <person2>.
+    (D) <person1> is not visible in relation to <person2>
+    Prediction:  (C) <person1> is to the left of <person2>. 
+    GT_answer:  (C)
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    """
     
     return
     

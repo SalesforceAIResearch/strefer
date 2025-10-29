@@ -22,7 +22,7 @@ cd /path/to/blip-3-strefer
 
 # Set common variables
 cache_dir='/path/to/.cache'
-data_root='/path/to/data/root'
+data_root='../assets'
 
 ########### model specific settings
 ckpt_path="/path/to/blip_3_strefer_checkpoint_0.pt"
